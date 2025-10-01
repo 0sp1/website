@@ -8,6 +8,13 @@
         border-radius: 2px;
         cursor: pointer;
         margin-right: 8px;
+        transition: opacity 0.15s;
+    }
+    .yt:hover{
+        opacity: 0.75;
+    }
+    .yt:active{
+        opacity: 0.50;
     }
     .join{
         background-color: white;
@@ -19,6 +26,14 @@
         width: 62px;
         border-radius: 3px;
         cursor: pointer;
+        transition: backgoung-color, 0.15s, color 0.15s;
+    }
+    .join:hover{
+        color: white;
+        background-color: rgb(17, 124, 239);
+    }
+    .join:active{
+        opacity: 0.7;
     }
     .tweet{
         color: white;
@@ -31,10 +46,14 @@
         font-size: 15px;
         cursor: pointer;
         margin-left: 8px;
+        transition: box-shadow 0.15s;
+    }
+    .tweet:hover{
+        box-shadow: 10px 10px 10px rgba(0,0,0, 0.15);
     }
 </style>
 <button class="yt">SUBSCRIBE</button>
-<button class="Join">JOIN</button>
+<button class="join">JOIN</button>
 <button class="tweet">Tweet</button>
 
 
