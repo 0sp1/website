@@ -6,9 +6,7 @@
 // document.getElementById("myH1").textContent = "Hello";
 // document.getElementById("myP").textContent = "i hate you dog";
 
-let x;
-let y
+let x = 500;
+let y = 44;
 
-x = 500
-y = 44
-console.log(x, y);
+console.log(`x is equal to ${x} and y is equal to ${y}`);
