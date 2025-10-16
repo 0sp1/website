@@ -1,32 +1,85 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Position Practice</title>
-    </head>
-    <body style="padding-bottom: 1000px; margin: 0; padding-left: 80px; padding-top: 60px;">
-        <div style="background-color: black; color: white; position: fixed; top: 0px; left: 0px; right: 0; height: 50px; z-index: 100;">
-            header
-        </div>
-        <div style="background-color: green; position: fixed; top: 50px; bottom: 0; width: 72px; left: 0;">
-            sidebar
-             <div style="position: absolute; background-color: red; color: white; top: 0px; right: 0px; z-index: 2;">
-                x
-            </div>
-       </div>
- 
-       <div style="position: absolute; background-color: red; color: white; top: 60px; right: 10px; z-index: 2;">
-            absolute
-       </div>
+  <head>
+    <title>Position Practice</title>
+    <style>
+      /* Add hover effects for the boxes */
+      .box {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
 
-       <div style="background-color: lightblue; height: 200px; width: 200px; position: static;">
-            div 1
-       </div> 
-       <div style="background-color: lightpink; height: 200px; width: 200px; position: relative;">
-            div2
-            <div style="position: absolute; background-color: black; color: white; bottom: 10px; right: 10px; border-radius: 2px;width: 40px; ">
-                5:00
-            </div>
-       </div>
-       
-    </body>
+      .box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Style for the search bar */
+      .search-container {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+      }
+
+      .search-container input {
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+      }
+
+      .search-container button {
+        padding: 5px 10px;
+        border: none;
+        background-color: #444;
+        color: white;
+        border-radius: 5px;
+        margin-left: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .search-container button:hover {
+        background-color: #666;
+      }
+    </style>
+  </head>
+  <body style="padding-bottom: 1000px; margin: 0; padding-left: 80px; padding-top: 60px;">
+    <!-- Header -->
+    <div
+      style="background-color: black; color: white; position: fixed; top: 0px; left: 0px; right: 0; height: 50px; z-index: 100; display: flex; align-items: center; padding-left: 10px;"
+    >
+      <div>header</div>
+
+      <!-- Search bar -->
+      <div class="search-container">
+        <input type="text" placeholder="Search..." />
+        <button>Go</button>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div style="background-color: green; position: fixed; top: 50px; bottom: 0; width: 72px; left: 0;">
+      sidebar
+      <div style="position: absolute; background-color: red; color: white; top: 0px; right: 0px; z-index: 2;">
+        x
+      </div>
+    </div>
+
+    <!-- Absolute div -->
+    <div style="position: absolute; background-color: red; color: white; top: 60px; right: 10px; z-index: 2;">
+      absolute
+    </div>
+
+    <!-- Boxes with hover -->
+    <div class="box" style="background-color: lightblue; height: 200px; width: 200px; position: static; margin-top: 20px;">
+      div 1
+    </div>
+    <div class="box" style="background-color: lightpink; height: 200px; width: 200px; position: relative; margin-top: 20px;">
+      div2
+      <div style="position: absolute; background-color: black; color: white; bottom: 10px; right: 10px; border-radius: 2px; width: 40px;">
+        5:00
+      </div>
+    </div>
+  </body>
 </html>
